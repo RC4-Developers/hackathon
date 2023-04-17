@@ -16,112 +16,157 @@ const tableData: Day[] = [
     day: "Monday",
     timeSlots: [
       {
-        time: "9:00AM",
-        activity: "Yoga",
-        location: "Studio A"
+        time: "10:00AM - 11:00AM",
+        activity: "Opening Ceremony",
+        location: "MPSH",
       },
       {
-        time: "11:00AM",
-        activity: "Pilates",
-        location: "Studio B"
+        time: "01:00PM - 04:00PM",
+        activity: "Professional Photoshoot",
+        location: "SR",
       },
       {
-        time: "2:00PM",
-        activity: "Zumba",
-        location: "Studio A"
-      }
-    ]
+        time: "12:00PM - 01:00PM",
+        activity: "Lunch",
+        location: "Outside SR",
+      },
+      {
+        time: "02:00PM - 03:00PM",
+        activity: "Workshop 1",
+        location: "SR",
+      },
+      {
+        time: "03:00PM - 04:00PM",
+        activity: "Workshop 2",
+        location: "SR",
+      },
+      {
+        time: "04:00PM - 05:00PM",
+        activity: "Workshop 3",
+        location: "SR",
+      },
+      {
+        time: "06:00PM - 08:00PM",
+        activity: "Dinner",
+        location: "Outside SR",
+      },
+      {
+        time: "08:00PM - 10:00PM",
+        activity: "Game Competition",
+        location: "SR",
+      },
+      {
+        time: "10:00PM - 12:00AM",
+        activity: "Supper",
+        location: "Outside SR",
+      },
+    ],
   },
   {
     day: "Tuesday",
     timeSlots: [
       {
-        time: "8:00AM",
-        activity: "Spinning",
-        location: "Studio B"
+        time: "12:00PM - 01:00PM",
+        activity: "Lunch",
+        location: "Outside SR",
       },
       {
-        time: "10:00AM",
-        activity: "Body Pump",
-        location: "Studio A"
+        time: "01:00PM - 04:00PM",
+        activity: "Professional Photoshoot",
+        location: "SR",
       },
       {
-        time: "3:00PM",
-        activity: "Yoga",
-        location: "Studio A"
-      }
-    ]
+        time: "01:00PM - 02:00PM",
+        activity: "Workshop 4",
+        location: "SR",
+      },
+      {
+        time: "02:00PM - 03:00PM",
+        activity: "Workshop 5",
+        location: "SR",
+      },
+      {
+        time: "05:00PM - 07:00AM",
+        activity: "Presentation of solutions to judges",
+        location: "MPSH",
+      },
+      {
+        time: "10:00PM - 12:00AM",
+        activity: "Dinner",
+        location: "Outside SR",
+      },
+    ],
   },
   // ... add more days as needed
 ];
 
 const Timetable: React.FC = () => {
   return (
-    <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+    <div className="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
       <div className="overflow-hidden sm:rounded-lg">
-        <table className="min-w-full divide-y divide-gray-200">
+        <table className="divide-gray-200 min-w-full divide-y">
           <thead className="bg-transparent">
             <tr>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="text-gray-500 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
               >
                 Day
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="text-gray-500 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
               >
                 Time
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="text-gray-500 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
               >
                 Activity
               </th>
               <th
                 scope="col"
-                className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+                className="text-gray-500 px-6 py-3 text-left text-xs font-medium uppercase tracking-wider"
               >
                 Location
               </th>
             </tr>
           </thead>
-          <tbody className="bg-transparent divide-y divide-gray-200">
+          <tbody className="divide-gray-200 divide-y bg-transparent">
             {tableData.map((day, i) => (
               <React.Fragment key={i}>
                 <tr>
                   <td
                     colSpan={4}
-                    className="px-6 py-4 whitespace-nowrap text-sm font-bold text-gray-900"
+                    className="text-gray-900 whitespace-nowrap px-6 py-4 text-sm font-bold"
                   >
                     {day.day}
                   </td>
                 </tr>
                 {day.timeSlots.map((slot, j) => (
                   <tr key={`${i}-${j}`}>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="text-gray-500 whitespace-nowrap px-6 py-4 text-sm">
                       {/* empty cell */}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="text-gray-500 whitespace-nowrap px-6 py-4 text-sm">
                       {slot.time}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="text-gray-500 whitespace-nowrap px-6 py-4 text-sm">
                       {slot.activity}
                     </td>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <td className="text-gray-500 whitespace-nowrap px-6 py-4 text-sm">
                       {slot.location}
                     </td>
                   </tr>
                 ))}
               </React.Fragment>
-            ))
-            }
-            </tbody>
-            </table>
-            </div>
-            </div>
-  )}
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
 
-  export default Timetable;
+export default Timetable;
