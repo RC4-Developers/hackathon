@@ -13,7 +13,7 @@ interface Day {
 
 const tableData: Day[] = [
   {
-    day: "Monday",
+    day: "5th May",
     timeSlots: [
       {
         time: "10:00AM - 11:00AM",
@@ -63,7 +63,7 @@ const tableData: Day[] = [
     ],
   },
   {
-    day: "Tuesday",
+    day: "6th May",
     timeSlots: [
       {
         time: "12:00PM - 01:00PM",
