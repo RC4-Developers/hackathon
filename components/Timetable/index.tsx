@@ -86,12 +86,12 @@ const tableData: Day[] = [
         location: "SR",
       },
       {
-        time: "05:00PM - 07:00AM",
+        time: "05:00PM - 07:00PM",
         activity: "Presentation of solutions to judges",
         location: "MPSH",
       },
       {
-        time: "10:00PM - 12:00AM",
+        time: "07:00PM - 09:00PM",
         activity: "Dinner",
         location: "Outside SR",
       },
